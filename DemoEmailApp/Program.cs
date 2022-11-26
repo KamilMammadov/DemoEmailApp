@@ -1,3 +1,4 @@
+using DemoEmailApp.AppDataBase;
 using Microsoft.EntityFrameworkCore;
 
 namespace DemoEmailApp
@@ -8,12 +9,14 @@ namespace DemoEmailApp
         {
             var builder = WebApplication.CreateBuilder(args);
             builder.Services
+
                 .AddDbContext<DataContext>(o =>
-                {
-                    o.UseSqlServer(builder.Configuration.GetConnectionString("MahmoodPC"));
-                })
-                .AddMvc()
-                .AddRazorRuntimeCompilation();
+                 {
+                     o.UseSqlServer("Server=DESKTOP-466PC0V;Database=DataEmail;Trusted_Connection=True;TrustServerCertificate=True;");
+                 }, ServiceLifetime.Transient)
+                //.AddScoped<IEmailService, SMTP>()
+                //.AddScoped<IEmployeeService, EmployeeService>()
+                .AddMvc();
 
             var app = builder.Build();
 
