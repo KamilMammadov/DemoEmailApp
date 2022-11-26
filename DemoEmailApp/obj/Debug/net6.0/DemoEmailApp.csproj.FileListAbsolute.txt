@@ -62,3 +62,5 @@ C:\Users\asus\Documents\Backend\EmailApp\DemoEmailApp\DemoEmailApp\obj\Debug\net
 C:\Users\asus\Documents\Backend\EmailApp\DemoEmailApp\DemoEmailApp\obj\Debug\net6.0\DemoEmailApp.pdb
 C:\Users\asus\Documents\Backend\EmailApp\DemoEmailApp\DemoEmailApp\obj\Debug\net6.0\DemoEmailApp.genruntimeconfig.cache
 C:\Users\asus\Documents\Backend\EmailApp\DemoEmailApp\DemoEmailApp\obj\Debug\net6.0\ref\DemoEmailApp.dll
+C:\Users\asus\Documents\Backend\EmailApp\DemoEmailApp\DemoEmailApp\obj\Debug\net6.0\DemoEmailApp.RazorAssemblyInfo.cache
+C:\Users\asus\Documents\Backend\EmailApp\DemoEmailApp\DemoEmailApp\obj\Debug\net6.0\DemoEmailApp.RazorAssemblyInfo.cs

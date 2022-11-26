@@ -10,6 +10,6 @@ namespace DemoEmailApp.Notifications.Model
         public string Tittle { get; set; }
         public string Message { get; set; }
         public int TargetEmailId { get; set; }
-        public List<Email> TargetEmail { get; set; }
+        public Email TargetEmail { get; set; }
     }
 }

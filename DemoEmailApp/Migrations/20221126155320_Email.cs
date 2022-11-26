@@ -4,7 +4,7 @@
 
 namespace DemoEmailApp.Migrations
 {
-    public partial class email : Migration
+    public partial class Email : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -35,48 +35,27 @@ namespace DemoEmailApp.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Notifications", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "EmailNotification",
-                columns: table => new
-                {
-                    NotificationsId = table.Column<int>(type: "int", nullable: false),
-                    TargetEmailId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_EmailNotification", x => new { x.NotificationsId, x.TargetEmailId });
                     table.ForeignKey(
-                        name: "FK_EmailNotification_Emails_TargetEmailId",
+                        name: "FK_Notifications_Emails_TargetEmailId",
                         column: x => x.TargetEmailId,
                         principalTable: "Emails",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_EmailNotification_Notifications_NotificationsId",
-                        column: x => x.NotificationsId,
-                        principalTable: "Notifications",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_EmailNotification_TargetEmailId",
-                table: "EmailNotification",
+                name: "IX_Notifications_TargetEmailId",
+                table: "Notifications",
                 column: "TargetEmailId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "EmailNotification");
+                name: "Notifications");
 
             migrationBuilder.DropTable(
                 name: "Emails");
-
-            migrationBuilder.DropTable(
-                name: "Notifications");
         }
     }
 }

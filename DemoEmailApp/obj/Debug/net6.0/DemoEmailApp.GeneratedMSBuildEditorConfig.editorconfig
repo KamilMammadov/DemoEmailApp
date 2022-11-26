@@ -14,3 +14,7 @@ build_property.SupportLocalizedComponentNames =
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = C:\Users\asus\Documents\Backend\EmailApp\DemoEmailApp\DemoEmailApp
 build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/asus/Documents/Backend/EmailApp/DemoEmailApp/DemoEmailApp/Views/Email/list.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1haWxcbGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

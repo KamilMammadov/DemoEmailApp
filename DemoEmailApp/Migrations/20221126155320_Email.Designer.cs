@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DemoEmailApp.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20221126135735_email")]
-    partial class email
+    [Migration("20221126155320_Email")]
+    partial class Email
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -65,37 +65,25 @@ namespace DemoEmailApp.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("TargetEmailId");
+
                     b.ToTable("Notifications");
                 });
 
-            modelBuilder.Entity("EmailNotification", b =>
+            modelBuilder.Entity("DemoEmailApp.Notifications.Model.Notification", b =>
                 {
-                    b.Property<int>("NotificationsId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TargetEmailId")
-                        .HasColumnType("int");
-
-                    b.HasKey("NotificationsId", "TargetEmailId");
-
-                    b.HasIndex("TargetEmailId");
-
-                    b.ToTable("EmailNotification");
-                });
-
-            modelBuilder.Entity("EmailNotification", b =>
-                {
-                    b.HasOne("DemoEmailApp.Notifications.Model.Notification", null)
-                        .WithMany()
-                        .HasForeignKey("NotificationsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("DemoEmailApp.Database.Email", null)
-                        .WithMany()
+                    b.HasOne("DemoEmailApp.Database.Email", "TargetEmail")
+                        .WithMany("Notifications")
                         .HasForeignKey("TargetEmailId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("TargetEmail");
+                });
+
+            modelBuilder.Entity("DemoEmailApp.Database.Email", b =>
+                {
+                    b.Navigation("Notifications");
                 });
 #pragma warning restore 612, 618
         }
