@@ -18,12 +18,11 @@ namespace DemoEmailApp.Controllers
         public IActionResult List()
         {
             var model = _dataContext.Notifications
-                .Select(e=> new ListViewModel(e.Tittle,e.From,e.Message,e.TargetEmail))
+                .Select(e=> new ListViewModel( e.From, $"{e.TargetEmail.TargetEmail}", e.Tittle, e.Message))
                 .ToList();
 
             return View(model);
-
-           
         }
+
     }
 }

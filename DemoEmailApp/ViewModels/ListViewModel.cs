@@ -8,15 +8,16 @@ namespace DemoEmailApp.ViewModels
         public string From { get; set; }
         public string Tittle { get; set; }
         public string Message { get; set; }
-        public Email ToEmail { get; set; }
+        public string ToEmail { get; set; }
 
       
-        public ListViewModel(string from, string tittle, string message, Email toemail)
+        public ListViewModel(string from, string toemail, string tittle, string message)
         {
             From = from;
+            ToEmail = toemail;
             Tittle = tittle;
             Message = message;
-             ToEmail = toemail;
+            
         }
 
     }

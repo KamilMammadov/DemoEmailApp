@@ -26,12 +26,19 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>mdo</td>
-                </tr>
+
+                @foreach (var email in Model)
+                {
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>@email.From</td>
+                        <td>@email.ToEmail</td>
+                        <td>@email.Tittle</td>
+                        <td>@email.Message</td>
+
+                    </tr>
+                }
+               
               
             </tbody>
         </table>
