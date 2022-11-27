@@ -64,3 +64,7 @@ C:\Users\asus\Documents\Backend\EmailApp\DemoEmailApp\DemoEmailApp\obj\Debug\net
 C:\Users\asus\Documents\Backend\EmailApp\DemoEmailApp\DemoEmailApp\obj\Debug\net6.0\ref\DemoEmailApp.dll
 C:\Users\asus\Documents\Backend\EmailApp\DemoEmailApp\DemoEmailApp\obj\Debug\net6.0\DemoEmailApp.RazorAssemblyInfo.cache
 C:\Users\asus\Documents\Backend\EmailApp\DemoEmailApp\DemoEmailApp\obj\Debug\net6.0\DemoEmailApp.RazorAssemblyInfo.cs
+C:\Users\asus\Documents\Backend\EmailApp\DemoEmailApp\DemoEmailApp\bin\Debug\net6.0\MailKit.dll
+C:\Users\asus\Documents\Backend\EmailApp\DemoEmailApp\DemoEmailApp\bin\Debug\net6.0\MimeKit.dll
+C:\Users\asus\Documents\Backend\EmailApp\DemoEmailApp\DemoEmailApp\bin\Debug\net6.0\NETCore.MailKit.dll
+C:\Users\asus\Documents\Backend\EmailApp\DemoEmailApp\DemoEmailApp\bin\Debug\net6.0\BouncyCastle.Crypto.dll

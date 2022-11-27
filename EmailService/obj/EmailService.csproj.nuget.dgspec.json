@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\asus\\Documents\\Backend\\EmailApp\\DemoEmailApp\\DemoEmailApp\\DemoEmailApp.csproj": {}
+    "C:\\Users\\asus\\Documents\\Backend\\EmailApp\\DemoEmailApp\\EmailService\\EmailService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\asus\\Documents\\Backend\\EmailApp\\DemoEmailApp\\DemoEmailApp\\DemoEmailApp.csproj": {
+    "C:\\Users\\asus\\Documents\\Backend\\EmailApp\\DemoEmailApp\\EmailService\\EmailService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\asus\\Documents\\Backend\\EmailApp\\DemoEmailApp\\DemoEmailApp\\DemoEmailApp.csproj",
-        "projectName": "DemoEmailApp",
-        "projectPath": "C:\\Users\\asus\\Documents\\Backend\\EmailApp\\DemoEmailApp\\DemoEmailApp\\DemoEmailApp.csproj",
+        "projectUniqueName": "C:\\Users\\asus\\Documents\\Backend\\EmailApp\\DemoEmailApp\\EmailService\\EmailService.csproj",
+        "projectName": "EmailService",
+        "projectPath": "C:\\Users\\asus\\Documents\\Backend\\EmailApp\\DemoEmailApp\\EmailService\\EmailService.csproj",
         "packagesPath": "C:\\Users\\asus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\asus\\Documents\\Backend\\EmailApp\\DemoEmailApp\\DemoEmailApp\\obj\\",
+        "outputPath": "C:\\Users\\asus\\Documents\\Backend\\EmailApp\\DemoEmailApp\\EmailService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -44,34 +44,6 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Microsoft.Data.SqlClient": {
-              "target": "Package",
-              "version": "[5.0.1, )"
-            },
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[6.0.11, )"
-            },
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[6.0.11, )"
-            },
-            "Microsoft.EntityFrameworkCore.Relational": {
-              "target": "Package",
-              "version": "[6.0.11, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[6.0.11, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[6.0.11, )"
-            },
             "NETCore.MailKit": {
               "target": "Package",
               "version": "[2.0.3, )"
@@ -89,9 +61,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

@@ -17,7 +17,6 @@ namespace DemoEmailApp.ViewModels
             ToEmail = toemail;
             Tittle = tittle;
             Message = message;
-            
         }
 
     }
