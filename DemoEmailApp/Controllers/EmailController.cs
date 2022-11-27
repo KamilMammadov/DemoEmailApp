@@ -19,6 +19,8 @@ namespace DemoEmailApp.Controllers
         }
 
 
+    
+
         public IActionResult List()
         {
             var model = _dataContext.Notifications
@@ -37,7 +39,7 @@ namespace DemoEmailApp.Controllers
         }
 
         [HttpPost]
-        public IActionResult Add([FromForm] AddViewModel model)
+        public IActionResult Add([FromForm] AddViewModel model,FormCollection form)
         {
             
 
@@ -48,8 +50,19 @@ namespace DemoEmailApp.Controllers
                Tittle=model.Tittle,
                Message=model.Message,
             };
-         
-            var message = new Message(new string[] {not.TargetEmail.TargetEmail}, not.Tittle ,not.Message);
+
+            string radio = form["aa"].ToString();
+
+
+
+            var newemails = not.TargetEmail.TargetEmail.Split(',');
+            List<string> emails = new List<string>();
+            foreach (var e in newemails)
+            {
+                emails.Add(e);
+            }
+            
+            var message = new Message(emails, not.Tittle ,not.Message);
 
             _dataContext.Notifications.Add(not);
             _emailSender.SendEmail(message);

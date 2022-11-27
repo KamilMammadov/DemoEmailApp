@@ -1,5 +1,6 @@
 ﻿@using DemoEmailApp.ViewModels
 @model List<ListViewModel>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
 
 <!DOCTYPE html>
@@ -13,7 +14,9 @@
     <title>Document</title>
 </head>
 <body>
+
     <div class="container">
+
         <table class="table">
             <thead>
                 <tr>
@@ -22,6 +25,11 @@
                     <th scope="col">To</th>
                     <th scope="col">Tittle</th>
                     <th scope="col">Message</th>
+                    <th scope="col">
+
+                        <a asp-controller="email" asp-action="add" class="btn btn-primary">Send new Email</a>
+
+                    </th>
 
                 </tr>
             </thead>
