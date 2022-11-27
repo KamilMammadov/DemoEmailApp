@@ -11,16 +11,16 @@ namespace DemoEmailApp.Controllers
     {
         private readonly DataContext _dataContext;
         private readonly IEmailSender _emailSender;
-    
-        public EmailController(DataContext dataContext,IEmailSender emailsender)
+        private readonly EmailConfiguration _emailConfig;
+
+
+        public EmailController(DataContext dataContext,IEmailSender emailsender, EmailConfiguration emailConfig)
         {
             _dataContext = dataContext;
             _emailSender = emailsender;
-           
+            _emailConfig = emailConfig;
         }
 
-
-    
 
         public IActionResult List()
         {
@@ -46,7 +46,7 @@ namespace DemoEmailApp.Controllers
 
             var not = new Notifications.Model.Notification
             {
-               From = model.From,
+               From = _emailConfig.From,
                TargetEmail = model.TargetEmail,
                Tittle=model.Tittle,
                Message=model.Message,
