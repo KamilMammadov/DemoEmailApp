@@ -22,21 +22,16 @@
                 <div class="">
                     <a asp-controller="email" asp-action="List" class="btn btn-secondary">Email List</a>
                  
-
-                    @using(Html.BeginForm("CheckRadio","Home",FormMethod.Post)){
-                        <div>
-                            Select Gender :<br/>
-                            @*Individual<input type="radio" name="aa" value="individual">
-                            Bulk<input type="radio" name="aa" value="bulk">*@
-                            Individual @Html.RadioButton("aa","individual")
-                            Bulk @Html.RadioButton("aa","bulk")
-
-
-                        </div>
-                    }
                 </div>
             </div>
-            <form method="POST" asp-controller="Email" asp-action="add">
+
+
+            <form method="POST" asp-controller="Email" asp-action="add" runat="server">
+               
+                Individual : @Html.RadioButtonFor(model => model.Status,"true")
+                Bulk : @Html.RadioButtonFor(model => model.Status,"false")
+
+
                 <div class="form-group">
                     <label asp-for="From"></label>
                     <input asp-for="From" class="form-control">

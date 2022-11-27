@@ -3,6 +3,7 @@ using DemoEmailApp.Database;
 using DemoEmailApp.EmailService;
 using DemoEmailApp.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using MimeKit;
 
 namespace DemoEmailApp.Controllers
 {
@@ -39,7 +40,7 @@ namespace DemoEmailApp.Controllers
         }
 
         [HttpPost]
-        public IActionResult Add([FromForm] AddViewModel model,FormCollection form)
+        public IActionResult Add([FromForm] AddViewModel model)
         {
             
 
@@ -51,16 +52,22 @@ namespace DemoEmailApp.Controllers
                Message=model.Message,
             };
 
-            string radio = form["aa"].ToString();
-
-
-
-            var newemails = not.TargetEmail.TargetEmail.Split(',');
             List<string> emails = new List<string>();
-            foreach (var e in newemails)
+
+            if (model.Status==false)
             {
-                emails.Add(e);
+             var newemails = not.TargetEmail.TargetEmail.Split(',');
+
+                foreach (var e in newemails)
+                {
+                    emails.Add(e);
+                }
             }
+            else
+            {
+                emails.Add(model.TargetEmail.TargetEmail);
+            }
+
             
             var message = new Message(emails, not.Tittle ,not.Message);
 
